@@ -1,8 +1,8 @@
 ## Trabalho da Matéria - Tópicos Especiais em Software
 ### Grupo 1 - Gerenciamennto de Vendas de Carros
-- Kauan Alexandre Mendes da Silva
-- João Pedro
-- Vinicius Rebellato
+- Kauan Alexandre Mendes da Silva - RGM 28952782
+- João Pedro - RGM 30586887
+- Vinicius Rebellato - RGM 
 
 #
 
