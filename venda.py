@@ -1,6 +1,6 @@
 from typing import List
-from models import ler_int
-from constantes import DESCONTO, MIN_VALOR_PARA_DESCONTO
+from models import ler_int #8.10 importação de modulos
+from constantes import DESCONTO, MIN_VALOR_PARA_DESCONTO # Variaveis Globais 8.1
 
 
 def vender_carro(lista_carros: List[dict]) -> None:
@@ -12,12 +12,12 @@ def vender_carro(lista_carros: List[dict]) -> None:
     for i, carro in enumerate(lista_carros):
         print(f"[{i}] {carro['modelo']} - {carro['fabricante']} | R$ {carro['preco']:.2f} | Estoque: {carro['estoque']}")
 
-    indice = ler_int("Escolha o índice do carro: ")
+    indice = ler_int("Escolha o índice do carro: ") # indice -> Var local 8.1
     if indice < 0 or indice >= len(lista_carros):
         print("Índice inválido.\n")
         return
 
-    carro = lista_carros[indice]
+    carro = lista_carros[indice] # carro -> Var local 8.1
     qtd = ler_int("Quantidade desejada: ")
     if qtd <= 0:
         print("Quantidade deve ser maior que zero.\n")
@@ -27,11 +27,12 @@ def vender_carro(lista_carros: List[dict]) -> None:
         print("Não há estoque suficiente para essa venda.\n")
         return
 
-    valor_bruto = carro['preco'] * qtd
-    desconto_aplicado = valor_bruto * DESCONTO if valor_bruto > MIN_VALOR_PARA_DESCONTO else 0.0
-    valor_final = valor_bruto - desconto_aplicado
+    valor_bruto = carro['preco'] * qtd # Var local 8.1
+    desconto_aplicado = valor_bruto * DESCONTO if valor_bruto > MIN_VALOR_PARA_DESCONTO else 0.0 # Var local 8.1
+    valor_final = valor_bruto - desconto_aplicado # Var local 8.1
 
     carro['estoque'] -= qtd
+
 
     print("\n--- Resumo da Venda ---")
     print(f"Carro: {carro['modelo']} - {carro['fabricante']}")

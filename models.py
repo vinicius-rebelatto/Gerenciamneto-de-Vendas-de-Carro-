@@ -1,4 +1,4 @@
-def criar_carro(modelo, fabricante, preco, estoque):
+def criar_carro(modelo, fabricante, preco, estoque): # nomenado paramentro 8.5
     return {
         "modelo": str(modelo),
         "fabricante": str(fabricante),
@@ -9,14 +9,14 @@ def criar_carro(modelo, fabricante, preco, estoque):
 
 def ler_str(mensagem: str) -> str:
     valor = input(mensagem).strip()
-    while valor == "":
+    while valor == "": # Validação 8.3
         print("Valor não pode ser vazio.")
         valor = input(mensagem).strip()
     return valor
 
 
 def ler_float(mensagem: str) -> float:
-    while True:
+    while True: # Validação 8.3
         texto = input(mensagem).replace(",", ".").strip()
         try:
             return float(texto)
@@ -25,9 +25,10 @@ def ler_float(mensagem: str) -> float:
 
 
 def ler_int(mensagem: str) -> int:
-    while True:
+    while True: # Validação 8.3
         texto = input(mensagem).strip()
         try:
+            type(texto) # type 8.12
             return int(texto)
         except ValueError:
             print("Entrada inválida. Digite um número inteiro.")
