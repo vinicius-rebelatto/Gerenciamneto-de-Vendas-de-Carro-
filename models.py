@@ -1,7 +1,14 @@
-def criar_carro(modelo, fabricante, preco, estoque): # nomenado paramentro 8.5
+def criar_carro(modelo, fabricante, preco, estoque):
+    if type(modelo) is not str or type(fabricante) is not str:
+        raise TypeError("Modelo e fabricante devem ser do tipo string.")
+    if type(preco) is not float and type(preco) is not int:
+        raise TypeError("Preço deve ser um número inteiro ou de ponto flutuante.")
+    if type(estoque) is not int:
+        raise TypeError("Estoque deve ser um número inteiro.")
+
     return {
-        "modelo": str(modelo),
-        "fabricante": str(fabricante),
+        "modelo": modelo,
+        "fabricante": fabricante,
         "preco": float(preco),
         "estoque": int(estoque),
     }

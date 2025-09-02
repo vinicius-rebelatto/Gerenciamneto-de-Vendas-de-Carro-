@@ -82,6 +82,6 @@ def demonstrar_sorteio_carro(lista_de_carros: list) -> None:
     # random.sample retorna uma nova lista contendo 1 item escolhido aleatoriamente
     carro_sorteado = random.sample(lista_de_carros, 1)[0]
     
-    print("🎉 O carro sorteado é... 🎉\n")
+    print("O carro sorteado é...\n")
     print(f"-> {carro_sorteado['modelo']} - {carro_sorteado['fabricante']}")
     print(f"   Preço: R$ {carro_sorteado['preco']:.2f}\n")
