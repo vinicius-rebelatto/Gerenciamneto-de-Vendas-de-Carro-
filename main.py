@@ -42,16 +42,9 @@ def main():
             elif sub_opcao == '3':
                 listar_carros(carros, criterio=eh_caro)
             elif sub_opcao == '4':
-                # TÓPICO 8.9: Em vez de definir uma função com 'def',
-                # criamos uma função anônima na hora com 'lambda'.
-                # A linha abaixo cria uma função que recebe 'carro' e retorna
-                # True se o fabricante for 'vw', e False caso contrário.
                 listar_carros(carros, criterio=lambda carro: carro['fabricante'].lower() == 'vw') #Uso da função lambda
             else:
                 print("Opção de listagem inválida.\n")
-            # --- FIM DA LÓGICA ---
-        
-        # ... (o resto do laço 'while' continua como está no seu arquivo)
         elif opcao == "3":
             vender_carro(carros)
         elif opcao == "4":

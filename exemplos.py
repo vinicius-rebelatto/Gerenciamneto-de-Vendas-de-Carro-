@@ -10,12 +10,10 @@ def fibonacci_recursivo(n: int) -> int:
         print("Fibonacci é definido apenas para números inteiros não-negativos.")
         return 0
         
-    # Condição de parada: n <= 1 retorna o próprio n (fib(0)=0, fib(1)=1) [cite: 324, 330, 331]
     if n <= 1:
         return n
-    # Chamada recursiva: fib(n-1) + fib(n-2) [cite: 324, 333]
     else:
-        return fibonacci_recursivo(n - 1) + fibonacci_recursivo(n - 2) #8.2 Funções recursivas
+        return fibonacci_recursivo(n - 1) + fibonacci_recursivo(n - 2)
 
 def demonstrar_fibonacci():
     """

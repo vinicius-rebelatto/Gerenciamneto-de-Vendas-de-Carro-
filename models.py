@@ -6,6 +6,7 @@ def criar_carro(modelo, fabricante, preco, estoque):
     if type(estoque) is not int:
         raise TypeError("Estoque deve ser um número inteiro.")
 
+def criar_carro(modelo, fabricante, preco, estoque=0): # nomenado paramentro 8.5
     return {
         "modelo": modelo,
         "fabricante": fabricante,
